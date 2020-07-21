@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import animal_list from './components/animal_list';
+
+const current_year = new Date().getFullYear();
+const user = <div>Tristan Whaley</div>
+
+const Animal = ({animal_name, sound}) => <div> The {animal_name} goes {sound}</div>
+
+const Body = ({animal_list}) =>
+(<div className = "farmhouse">
+    {animal_list.map(animal => <Animal key = {animal.id} animal_name = {animal.animal_name} sound = {animal.sound}/>)}
+</div>)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Body animal_list = {animal_list}/>
+      <Footer current_year = {current_year} user = {user}/>
     </div>
   );
 }

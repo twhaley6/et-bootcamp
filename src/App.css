@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  background-color: lightslategray;
+  color: maroon;
+  font-weight: bold;
+  height: 50 px;
+  font-size: large;
+}
+.farmhouse{
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  color: rgb(255, 184, 30);
+  background-color: darkslategray;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  background-color: lightslategray;
+}
